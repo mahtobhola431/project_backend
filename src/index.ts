@@ -1,6 +1,6 @@
 // Import environment variables from .env file
 import 'dotenv/config';
-import commentRoutes from './routes/comment.route';
+
 
 // Import express and related types for building the server
 import express, { NextFunction, Request, Response } from 'express';
@@ -92,7 +92,6 @@ app.get(
 );
 
 
-app.use(`${BASE_PATH}/comments`, commentRoutes);
 
 app.use(`${BASE_PATH}/auth`, authRoutes);
 // Mount user-related routes at /user, protected by authentication middleware
